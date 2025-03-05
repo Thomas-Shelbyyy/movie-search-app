@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const API_URL = "http://127.0.0.1:8000"; // FastAPI backend
+const API_URL = process.env.REACT_APP_BACKEND_URL; // ✅ Uses environment variable
+
+
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -99,3 +101,5 @@ function App() {
 }
 
 export default App;
+
+
